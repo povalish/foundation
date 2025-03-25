@@ -10,10 +10,8 @@
     "test": "vitest"
   },
   "simple-git-hooks": {
-    "pre-commit": [
-      "npm check:lint",
-      "npm check:types"
-    ]
+    "pre-commit": "npm run check:lint && npm run check:types",
+    "pre-push": "npm run test"
   },
   "dependencies": {
     "@types/node": "^22.13.9",
