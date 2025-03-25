@@ -12,7 +12,7 @@
   },
   "simple-git-hooks": {
     "pre-commit": "npm run check:lint && npm run check:types",
-    "pre-push": "npm run test:watch"
+    "pre-push": "npm run check:test"
   },
   "dependencies": {
     "@types/node": "^22.13.9",
