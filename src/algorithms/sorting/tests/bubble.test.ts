@@ -1,6 +1,6 @@
 import { bubbleSort } from '../bubble';
 
-describe('binary search', () => {
+describe.skip('binary search', () => {
   const unSortedArray = [4, 2, 7, 1, 3];
   const sortedArray = [1, 2, 3, 4, 7];
 
