@@ -1,6 +1,8 @@
 /**
  * Find greatest product between each pair.
  * Compexity: O(N^2)
+ *
+ * #loops
  */
 
 function greatestProduct(array: number[]): [number, number] {

@@ -1,9 +1,10 @@
 import { defineConfig } from 'vitest/config';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-  plugins: [],
+  plugins: [tsconfigPaths()],
   test: {
-    include: ['**/*.test.ts'],
+    include: ['**/*.test.ts', 'src/leetcode/**/*.ts', 'src/codewars/**/*.ts'],
     globals: true,
   },
 });

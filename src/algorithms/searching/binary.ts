@@ -1,6 +1,8 @@
 /**
  * Binary Search.
  * Complexity: O(logN)
+ *
+ * #sort
  */
 
 export function binarySearchWithRecursion(array: number[], target: number): boolean {

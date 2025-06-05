@@ -1,6 +1,8 @@
 /**
  * Search array for duplicates.
  * Compexity: O(N)
+ *
+ * #hash-tables
  */
 
 export function hasDuplicates(array: number[]): boolean {

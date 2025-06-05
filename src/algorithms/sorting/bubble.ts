@@ -1,31 +1,41 @@
 /**
- * Bubble Sort.
+ * Bubble Sort
+ *
  * Complexity: O(N^2)
+ * AVG - O(N^2)
+ * BEST -O(N)
+ * WORST - O(N^2)
  *
  * Description
  * The task is pushing the largest element to the end of the list.
  * - compare the elements with each other and swap them.
  * - along the way, saving the index of the last sorted part.
+ *
+ * #sort
  */
 
 export function bubbleSort(array: number[]): number[] {
-  let lastSortedIndex = array.length;
-  let operations = 0;
+  let lastSortedIndex = array.length - 1;
+  let isSorted = false;
 
-  for (let i = 0; i <= lastSortedIndex; i++) {
-    for (let j = 0; j < lastSortedIndex - 1; j++) {
+  for (let i = 0; i < array.length; i++) {
+    isSorted = true;
+
+    for (let j = 0; j < lastSortedIndex; j++) {
       if (array[j] > array[j + 1]) {
-        operations += 1;
+        isSorted = false;
         const tmp = array[j];
         array[j] = array[j + 1];
         array[j + 1] = tmp;
       }
     }
 
+    if (isSorted) {
+      return array;
+    }
+
     lastSortedIndex -= 1;
   }
-
-  console.log(`Operations - ${operations}`);
 
   return array;
 }
@@ -33,7 +43,6 @@ export function bubbleSort(array: number[]): number[] {
 export function bubbleSortV2(array: number[]): number[] {
   let lastSortedIndex = array.length - 1;
   let isArraySorted = false;
-  let operations = 0;
 
   while (!isArraySorted) {
     isArraySorted = true;
@@ -41,7 +50,6 @@ export function bubbleSortV2(array: number[]): number[] {
     for (let i = 0; i <= lastSortedIndex; i++) {
       if (array[i] > array[i + 1]) {
         isArraySorted = false;
-        operations += 1;
 
         // swap
         const tmp = array[i];
@@ -52,8 +60,6 @@ export function bubbleSortV2(array: number[]): number[] {
 
     lastSortedIndex -= 1;
   }
-
-  console.log(`Operations - ${operations}`);
 
   return array;
 }
