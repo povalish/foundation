@@ -27,7 +27,6 @@ function anagrams(str: string): string[] {
 describe('anagrams', () => {
   test('should pass test', () => {
     const result = anagrams('abc');
-    console.log('Result: ', result);
     expect(result).not.toEqual([]);
   });
 });
