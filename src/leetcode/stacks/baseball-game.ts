@@ -28,7 +28,7 @@
  * #stacks
  */
 
-import { Stack } from '@data-structures/Stack';
+import { Stack } from '@data-structures/stack/Stack.array';
 
 function calPoints(operations: string[]): number {
   const stack = new Stack<number>();
@@ -40,12 +40,12 @@ function calPoints(operations: string[]): number {
         break;
 
       case 'D':
-        stack.push(stack.top()! * 2);
+        stack.push(stack.read()! * 2);
         break;
 
       case '+': {
         const last = stack.pop()!;
-        const prelast = stack.top()!;
+        const prelast = stack.read()!;
         stack.push(last);
         stack.push(last + prelast);
         break;
@@ -59,7 +59,7 @@ function calPoints(operations: string[]): number {
 
   let result = 0;
 
-  while (stack.size !== 0) {
+  while (stack.length !== 0) {
     result += stack.pop()!;
   }
 

@@ -1,4 +1,4 @@
-import { Stack } from 'data-structures/Stack';
+import { Stack } from '@data-structures/stack/Stack.array';
 
 function isValid(s: string): boolean {
   const open: Record<string, string> = { '(': ')', '[': ']', '{': '}' };
@@ -19,7 +19,7 @@ function isValid(s: string): boolean {
     }
   }
 
-  return stack.size === 0;
+  return stack.length === 0;
 }
 
 //

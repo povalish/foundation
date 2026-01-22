@@ -5,6 +5,10 @@ export class Queue<T> {
     this.data = init || [];
   }
 
+  get size(): number {
+    return this.data.length;
+  }
+
   public enqueue(value: T): void {
     this.data.push(value);
   }
@@ -23,5 +27,9 @@ export class Queue<T> {
     }
 
     return this.data[0];
+  }
+
+  public clear(): void {
+    this.data = [];
   }
 }
