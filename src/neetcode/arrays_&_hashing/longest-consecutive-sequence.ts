@@ -18,8 +18,6 @@ function longestConsecutive(nums: number[]): number {
     if (!sequence.has(num)) sequence.set(num, null);
   });
 
-  console.log(sequence);
-
   for (const num of nums) {
     if (!sequence.has(num - 1)) {
       let maxSeq = 1;

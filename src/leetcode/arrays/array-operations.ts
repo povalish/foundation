@@ -73,17 +73,4 @@ describe('Replace Elements in an Array', () => {
     ];
     expect(arrayChange(nums, operations)).toEqual([2, 1]);
   });
-
-  test.skip('advanced cases', () => {
-    const nums: number[] = Array.from({ length: 100 });
-    const operations: number[][] = Array.from({ length: 100 });
-
-    for (let i = 0; i < 100; i++) {
-      nums[i] = i + 1;
-      operations[i] = [100 - i, 100 - i + 1];
-    }
-
-    const result = arrayChange(nums, operations);
-    console.log(result);
-  });
 });
