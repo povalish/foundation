@@ -2,3 +2,6 @@
 /.yarn/releases/*    binary
 /.yarn/plugins/**/*  binary
 /.pnp.*              binary linguist-generated
+
+* text=auto eol=lf
+*.{js,jsx,ts,tsx,json,css} eol=lf

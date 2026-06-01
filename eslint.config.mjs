@@ -12,6 +12,7 @@ export default [
   eslintPluginPrettierRecommended,
   {
     rules: {
+      'linebreak-style': 'off',
       '@typescript-eslint/explicit-function-return-type': 'error',
     },
   },
