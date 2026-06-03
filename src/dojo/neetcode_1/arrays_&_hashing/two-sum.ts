@@ -15,7 +15,7 @@ function twoSum(nums: number[], target: number): [number, number] {
 //
 
 describe('Two Sum', () => {
-  it('should pass', () => {
+  it('should pass basic cases', () => {
     expect(twoSum([3, 4, 5, 6], 7)).toEqual([0, 1]);
   });
 });

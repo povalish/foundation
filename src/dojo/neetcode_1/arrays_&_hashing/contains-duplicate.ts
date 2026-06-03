@@ -10,7 +10,7 @@ function hasDuplicate(nums: number[]): boolean {
 //
 
 describe('Contains Duplicate', () => {
-  it('should pass tests', () => {
+  it('should pass basic cases', () => {
     expect(hasDuplicate([1, 2, 3, 3])).toEqual(true);
     expect(hasDuplicate([1, 2, 3, 4])).toEqual(false);
   });

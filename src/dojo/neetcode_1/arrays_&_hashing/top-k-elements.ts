@@ -34,7 +34,7 @@ function topKFrequent(nums: number[], k: number): number[] {
 //
 
 describe('Top K Frequent Elements', () => {
-  it('should pass cases', () => {
+  it('should pass basic cases', () => {
     expect(topKFrequent([1, 2, 2, 2, 3, 3, 3], 2)).toEqual([2, 3]);
     expect(topKFrequent([7, 7], 1)).toEqual([7]);
   });

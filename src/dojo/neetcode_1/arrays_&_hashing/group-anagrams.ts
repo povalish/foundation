@@ -45,7 +45,7 @@ function groupAnagrams(strs: string[]): string[][] {
 //
 
 describe('DOJO: Group Anagrams', () => {
-  it('should pass test', () => {
+  it('should pass basic cases', () => {
     expect(groupAnagrams(['act', 'pots', 'tops', 'cat', 'stop', 'hat'])).toEqual([
       ['act', 'cat'],
       ['pots', 'tops', 'stop'],
