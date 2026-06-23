@@ -10,6 +10,7 @@ export default defineConfig({
       'src/codewars/**/*.ts',
       'src/neetcode/**/*.ts',
       'src/dojo/**/*.ts',
+      'src/interviews/**/*.ts',
     ],
     globals: true,
   },
