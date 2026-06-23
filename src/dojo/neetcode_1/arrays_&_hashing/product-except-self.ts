@@ -24,8 +24,6 @@ function productExceptSelf(nums: number[]): number[] {
     currentProduct *= nums[i];
   }
 
-  console.log(result);
-
   return result;
 }
 
