@@ -7,22 +7,24 @@
  */
 
 function removeDuplicates(nums: number[]): number {
-  let leftPointer = 1;
-  let rightPointer = 1;
+  let pointerFill = 0;
+  let pointerSearch = 0;
 
-  while (rightPointer < nums.length) {
-    if (nums[rightPointer] !== nums[rightPointer - 1]) {
-      nums[leftPointer] = nums[rightPointer];
-      leftPointer++;
+  while (pointerSearch < nums.length) {
+    if (nums[pointerFill] !== nums[pointerSearch]) {
+      pointerFill++;
+      nums[pointerFill] = nums[pointerSearch];
     }
 
-    rightPointer++;
+    pointerSearch++;
   }
 
-  return leftPointer;
+  return pointerFill + 1;
 }
 
 //
+
+// removeDuplicates([2, 10, 10, 30, 30, 30]);
 
 describe('Remove Duplicates From Sorted Array', () => {
   it('should pass basic tests', () => {
@@ -30,3 +32,10 @@ describe('Remove Duplicates From Sorted Array', () => {
     expect(removeDuplicates([2, 10, 10, 30, 30, 30])).toEqual(3);
   });
 });
+
+/**
+ * p1 - 1
+ * p2 - 2
+ *
+ * 1 - 2 - 3 - 4* - 4*
+ */

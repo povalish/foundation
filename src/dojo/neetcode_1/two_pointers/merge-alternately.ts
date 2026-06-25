@@ -9,17 +9,17 @@
 function mergeAlternately(word1: string, word2: string): string {
   let word1Index = 0;
   let word2Index = 0;
-  let result = '';
 
-  while (word1Index < word1.length || word2Index < word2.length) {
-    if (word1Index < word1.length) result += word1[word1Index];
-    if (word2Index < word2.length) result += word2[word2Index];
+  let resultWord = '';
 
-    word1Index = Math.min(word1Index + 1, word1.length);
-    word2Index = Math.min(word2Index + 1, word2.length);
+  while (word1Index < word1.length || word1Index < word2.length) {
+    if (word1Index < word1.length) resultWord += word1[word1Index];
+    if (word2Index < word2.length) resultWord += word2[word2Index];
+    word1Index++;
+    word2Index++;
   }
 
-  return result;
+  return resultWord;
 }
 
 //

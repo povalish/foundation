@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Merge Sorted Array
  * https://neetcode.io/problems/merge-sorted-array/question?list=neetcode250
@@ -7,26 +8,24 @@
  */
 
 function merge(nums1: number[], m: number, nums2: number[], n: number): number[] | void {
-  let n1Idx = m - 1;
-  let n2Idx = n - 1;
-  let lastIdx = m + n - 1;
+  let nums1Pointer = 0;
+  let nums2Pointer = 0;
 
-  while (n2Idx >= 0) {
-    if (n1Idx >= 0 && nums1[n1Idx] > nums2[n2Idx]) {
-      nums1[lastIdx] = nums1[n1Idx];
-      lastIdx--;
-      n1Idx--;
+  while (nums1Pointer < nums1.length) {
+    if (nums1[nums1Pointer] > nums2[nums2Pointer]) {
+      [nums1[nums1Pointer], nums2[nums2Pointer]] = [nums2[nums2Pointer], nums1[nums1Pointer]];
     } else {
-      nums1[lastIdx] = nums2[n2Idx];
-      lastIdx--;
-      n2Idx--;
+      [nums2[nums2Pointer], nums1[nums1Pointer]] = [nums1[nums1Pointer], nums2[nums2Pointer]];
     }
+
+    nums1Pointer++;
+    nums2Pointer = (nums2Pointer + 1) % nums2.length;
   }
 
   return nums1;
 }
 
-// merge([10, 20, 20, 40, 0, 0], 4, [1, 2], 2);
+// merge([10, 20, 20, 40, 0, 0, 0], 4, [1, 2, 3], 3);
 
 //
 
@@ -36,3 +35,8 @@ describe('Merge Sorted Array', () => {
     expect(merge([0, 0], 0, [1, 2], 2)).toEqual([1, 2]);
   });
 });
+
+/**
+ *
+ * [1, 2, 3] - [10, 20, 20]
+ */
